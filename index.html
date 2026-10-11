@@ -1,21 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KGDJPFR8PN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KGDJPFR8PN');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101827">
-<meta name="description" content="Free online PDF, image, calculator, text and developer tools. Fast, simple and privacy-friendly.">
-<title>AllToolsHub — Free Online Tools</title>
-<style>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Free online PDF, image, calculator, text and developer tools. Fast, simple and privacy-friendly.">
+  <title>AllToolsHub — Free Online Tools</title>
+  <style>
 :root{--bg:#0b1120;--panel:#111a2d;--panel2:#162238;--line:#28354c;--text:#eef4ff;--muted:#9aa9c1;--accent:#7c9cff;--accent2:#62e6c2;--danger:#ff7d91;--shadow:0 18px 50px #0003}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 450px at 80% -5%,#263b70 0%,transparent 60%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
@@ -34,38 +25,88 @@ footer{border-top:1px solid #ffffff12;padding:28px 0 38px;color:var(--muted);fon
 @media(max-width:850px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:13px}.hero{padding-top:55px}}
 @media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.nav{height:64px}.navlinks{display:none}.menu{display:block}.hero{padding:48px 0 32px}h1{letter-spacing:-1.5px}.stats{gap:8px;margin-bottom:38px}.stat{padding:13px 8px}.stat strong{font-size:19px}.stat span{font-size:10px}.section-head{align-items:stretch;flex-direction:column}.tool-grid{grid-template-columns:1fr}.tool-card{min-height:145px}.privacy{align-items:flex-start;padding:18px}.row-fields{grid-template-columns:1fr}.modal-body{padding:16px}.modal-head{padding:16px}.trust{gap:12px}}
 </style>
-</head>
-<body>
-<header><div class="wrap nav">
-  <a class="brand" href="#"><span class="logo">A</span><span>AllTools<span>Hub</span></span></a>
-  <nav class="navlinks"><a href="#tools">All tools</a><a href="#privacy">Privacy</a><a href="#about">About</a></nav>
-  <a class="btn small menu" href="#tools">Explore tools ↓</a>
-</div></header>
-<main>
-<section class="hero wrap">
-  <div class="eyebrow"><span class="dot"></span> FREE TOOLS · NO SIGN-UP</div>
-  <h1>Everyday tasks, <span class="gradient">made effortless.</span></h1>
-  <p>Handy PDF, image, text and developer tools in one simple place. No account needed, and many tasks run right in your browser.</p>
-  <div class="hero-actions"><a class="btn primary" href="#tools">Explore all tools <span>↗</span></a><button class="btn" id="randomTool">✨ Surprise me</button></div>
-  <div class="trust"><span><b>✓</b> Free to use</span><span><b>✓</b> No sign-up</span><span><b>✓</b> Browser-based tools</span></div>
-</section>
-<section class="wrap stats">
-  <div class="stat"><strong>15</strong><span>Useful tools</span></div><div class="stat"><strong>0</strong><span>Accounts required</span></div><div class="stat"><strong>100%</strong><span>Simple to use</span></div>
-</section>
-<section class="wrap" id="tools">
-  <div class="section-head"><div><h2>Find your tool</h2><p>Choose a tool and get it done in seconds.</p></div><div class="searchbox"><span>⌕</span><input id="search" type="search" placeholder="Search tools..." aria-label="Search tools"></div></div>
-  <div class="filters" id="filters"></div>
-  <div class="tool-grid" id="toolGrid"></div>
-  <p id="empty" class="muted hidden">No tools found. Try another search.</p>
-</section>
-<section class="wrap privacy" id="privacy"><div class="privacy-icon">🛡️</div><div><h3>Your files stay yours</h3><p>File tools are designed to process content locally in your browser when possible. Avoid uploading sensitive files to any website unless you trust how it handles them. External libraries load from public CDNs.</p></div></section>
-</main>
-<footer id="about"><div class="wrap foot"><div><b style="color:#eef4ff">AllToolsHub</b> · Useful tools, less hassle.</div><div>Free to use · Built for the web · © <span id="year"></span> AllToolsHub</div></div></footer>
-<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><h2 id="modalTitle">Tool</h2><button class="close" id="closeModal" aria-label="Close">×</button></div><div class="modal-body" id="modalBody"></div></div></div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
+ </head>
+ <body>
+  <header>
+   <div class="wrap nav">
+    <a class="brand" href="#"><span class="logo">A</span><span>AllTools<span>Hub</span></span></a>
+    <nav class="navlinks">
+     <a href="#tools">All tools</a><a href="#privacy">Privacy</a><a href="#about">About</a>
+    </nav>
+    <a class="btn small menu" href="#tools">Explore tools ↓</a>
+   </div>
+  </header>
+  <main>
+   <section class="hero wrap">
+    <div class="eyebrow">
+     <span class="dot"></span> FREE TOOLS · NO SIGN-UP
+    </div>
+    <h1>Everyday tasks, <span class="gradient">made effortless.</span></h1>
+    <p>Handy PDF, image, text and developer tools in one simple place. No account needed, and many tasks run right in your browser.</p>
+    <div class="hero-actions">
+     <a class="btn primary" href="#tools">Explore all tools <span>↗</span></a>
+     <button class="btn" id="randomTool">✨ Surprise me</button>
+    </div>
+    <div class="trust">
+     <span><b>✓</b> Free to use</span><span><b>✓</b> No sign-up</span><span><b>✓</b> Browser-based tools</span>
+    </div>
+   </section>
+   <section class="wrap stats">
+    <div class="stat">
+     <strong>15</strong><span>Useful tools</span>
+    </div>
+    <div class="stat">
+     <strong>0</strong><span>Accounts required</span>
+    </div>
+    <div class="stat">
+     <strong>100%</strong><span>Simple to use</span>
+    </div>
+   </section>
+   <section class="wrap" id="tools">
+    <div class="section-head">
+     <div>
+      <h2>Find your tool</h2>
+      <p>Choose a tool and get it done in seconds.</p>
+     </div>
+     <div class="searchbox">
+      <span>⌕</span><input id="search" type="search" placeholder="Search tools..." aria-label="Search tools">
+     </div>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="tool-grid" id="toolGrid"></div>
+    <p id="empty" class="muted hidden">No tools found. Try another search.</p>
+   </section>
+   <section class="wrap privacy" id="privacy">
+    <div class="privacy-icon">🛡️</div>
+    <div>
+     <h3>Your files stay yours</h3>
+     <p>File tools are designed to process content locally in your browser when possible. Avoid uploading sensitive files to any website unless you trust how it handles them. External libraries load from public CDNs.</p>
+    </div>
+   </section>
+  </main>
+  <footer id="about">
+   <div class="wrap foot">
+    <div>
+     <b style="color:#eef4ff">AllToolsHub</b> · Useful tools, less hassle.
+    </div>
+    <div>
+     Free to use · Built for the web · © <span id="year"></span> AllToolsHub
+    </div>
+   </div>
+  </footer>
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+   <div class="modal">
+    <div class="modal-head">
+     <h2 id="modalTitle">Tool</h2>
+     <button class="close" id="closeModal" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+   </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
 const tools=[
 {id:'jpg-pdf',name:'JPG to PDF',cat:'PDF Tools',icon:'▧',desc:'Turn images into a neat PDF document.',tag:'PDF',action:'jpg-pdf'},
 {id:'merge-pdf',name:'Merge PDF',cat:'PDF Tools',icon:'▤',desc:'Combine multiple PDF files into one.',tag:'PDF',action:'merge-pdf'},
@@ -108,48 +149,4 @@ case'jpg-png':return file(false,'image/jpeg,image/jpg,image/webp,image/png','Cho
 case'qr':return '<div class="field"><label>Text or URL</label><input id="qrtext" placeholder="https://example.com" value="https://example.com"></div><div class="field"><label>Size</label><select id="qrsize"><option>128</option><option selected>200</option><option>300</option><option>400</option></select></div><button class="btn primary" id="run">Generate QR code</button>';
 case'word-counter':return '<div class="field"><label>Your text</label><textarea id="text" placeholder="Paste or type your text here..."></textarea></div><div class="tool-actions"><button class="btn primary" id="run">Count text</button><button class="btn" id="clear">Clear</button></div>';
 case'age':return '<div class="field"><label>Date of birth</label><input id="dob" type="date" max="'+new Date().toISOString().slice(0,10)+'"></div><div class="field"><label>Calculate age on (optional)</label><input id="asof" type="date" value="'+new Date().toISOString().slice(0,10)+'"></div><button class="btn primary" id="run">Calculate age</button>';
-case'percentage':return '<div class="field"><label>Calculation type</label><select id="ptype"><option value="of">What is X% of Y?</option><option value="is">X is what % of Y?</option><option value="change">Percentage change from X to Y</option></select></div><div class="row-fields"><div class="field"><label id="labA">Percentage (X)</label><input id="numA" type="number" placeholder="e.g. 20"></div><div class="field"><label id="labB">Number (Y)</label><input id="numB" type="number" placeholder="e.g. 150"></div></div><button class="btn primary" id="run">Calculate</button>';
-case'json':return '<div class="field"><label>JSON input</label><textarea id="jsontext" spellcheck="false" placeholder=\'{"hello":"world"}\'></textarea></div><div class="tool-actions"><button class="btn primary" id="run">Format & validate</button><button class="btn" id="minify">Minify</button></div>';
-case'password':return '<div class="field"><label>Password length</label><input id="length" type="number" min="8" max="128" value="20"></div><div class="field"><label class="checkrow"><input type="checkbox" id="upper" checked> Uppercase letters (A-Z)</label><label class="checkrow"><input type="checkbox" id="lower" checked> Lowercase letters (a-z)</label><label class="checkrow"><input type="checkbox" id="nums" checked> Numbers (0-9)</label><label class="checkrow"><input type="checkbox" id="symbols" checked> Symbols (!@#...)</label></div><button class="btn primary" id="run">Generate password</button>';
-case'youtube':return '<div class="field"><label>YouTube video URL or ID</label><input id="video" placeholder="https://www.youtube.com/watch?v=..." /></div><button class="btn primary" id="run">Preview thumbnails</button><p class="muted">Only publicly available thumbnail images will appear. This tool does not download the video.</p>';
-}
-}
-function setStatus(msg,type=''){const s=$('#status');if(s){s.textContent=msg;s.className='status '+type}}
-function showResult(html){const r=$('#result');r.innerHTML=html;r.classList.remove('hidden')}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function downloadBlob(blob,name){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)}
-function readFile(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsArrayBuffer(file)})}
-function loadImage(file){return new Promise((resolve,reject)=>{const url=URL.createObjectURL(file),im=new Image();im.onload=()=>resolve({im,url});im.onerror=()=>{URL.revokeObjectURL(url);reject(new Error('Could not open this image.'))};im.src=url})}
-function canvasBlob(canvas,type,q){return new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(new Error('Could not export image.')),type,q))}
-async function getPdfJs(){if(!window.pdfjsLib)throw new Error('PDF library did not load. Check your internet connection and refresh.');pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';return pdfjsLib}
-async function renderPdfPages(file,scale=1.4,quality=.65){const lib=await getPdfJs();const bytes=await readFile(file);const pdf=await lib.getDocument({data:new Uint8Array(bytes)}).promise;const pages=[];for(let i=1;i<=pdf.numPages;i++){setStatus(`Processing page ${i} of ${pdf.numPages}…`);const page=await pdf.getPage(i);const viewport=page.getViewport({scale});const canvas=document.createElement('canvas');canvas.width=Math.ceil(viewport.width);canvas.height=Math.ceil(viewport.height);await page.render({canvasContext:canvas.getContext('2d'),viewport}).promise;pages.push({canvas,blob:await canvasBlob(canvas,'image/jpeg',quality)});canvas.width=1;canvas.height=1}return pages}
-function wireTool(id){const run=$('#run');if(id==='percentage')$('#ptype').addEventListener('change',()=>{const v=$('#ptype').value;$('#labA').textContent=v==='of'?'Percentage (X)':'First number (X)';$('#labB').textContent=v==='of'?'Number (Y)':'Second number (Y)'});
-if(id==='word-counter'){$('#text').addEventListener('input',countText);$('#clear').onclick=()=>{$('#text').value='';countText()}}
-if(id==='json')$('#minify').onclick=()=>jsonAction(true);
-if(id==='youtube'){}
-if(!run)return;
-run.addEventListener('click',async()=>{try{run.disabled=true;run.textContent='Working…';setStatus('Processing…');$('#result').classList.add('hidden');await executeTool(id)}catch(e){setStatus(e.message||'Something went wrong. Please try again.','error')}finally{run.disabled=false;run.textContent=buttonLabel(id)}});
-if(id==='word-counter')countText();
-}
-function buttonLabel(id){return ({'jpg-pdf':'Create PDF','merge-pdf':'Merge PDFs','compress-pdf':'Compress PDF','pdf-jpg':'Convert pages','split-pdf':'Split PDF','image-compressor':'Compress image','image-resizer':'Resize image','jpg-png':'Convert to PNG','qr':'Generate QR code','word-counter':'Count text','age':'Calculate age','percentage':'Calculate','json':'Format & validate','password':'Generate password','youtube':'Preview thumbnails'})[id]||'Run'}
-function countText(){const t=$('#text').value;const words=t.trim()?t.trim().split(/\s+/u).length:0;const chars=t.length;const charsNo=t.replace(/\s/g,'').length;const sentences=(t.match(/[.!?]+(?=\s|$)/g)||[]).length;const lines=t? t.split(/\r\n|\r|\n/).length:0;showResult(`<div class="row-fields"><div><span class="muted">Words</span><h2>${words}</h2></div><div><span class="muted">Characters</span><h2>${chars}</h2></div><div><span class="muted">No spaces</span><h2>${charsNo}</h2></div><div><span class="muted">Sentences / lines</span><h2>${sentences} / ${lines}</h2></div></div>`);setStatus('Counts update as you type.','success')}
-function jsonAction(minify){try{const obj=JSON.parse($('#jsontext').value);const formatted=minify?JSON.stringify(obj):JSON.stringify(obj,null,2);$('#jsontext').value=formatted;showResult(`<pre style="white-space:pre-wrap;overflow-wrap:anywhere;margin:0">${esc(formatted)}</pre><button class="btn small" id="copyJson">Copy JSON</button>`);$('#copyJson').onclick=()=>navigator.clipboard.writeText(formatted).then(()=>setStatus('Copied to clipboard.','success')).catch(()=>setStatus('Select the formatted text and copy it manually.'));setStatus('Valid JSON.','success')}catch(e){setStatus('Invalid JSON: '+e.message,'error')}}
-async function executeTool(id){
-if(id==='jpg-pdf'){const fs=[...$('#files').files];if(!fs.length)throw Error('Choose at least one image.');const {PDFDocument}=PDFLib;const pdf=await PDFDocument.create();for(let i=0;i<fs.length;i++){const f=fs[i];if(!/^image\/(jpeg|png)$/.test(f.type))throw Error('Use JPG or PNG images for best compatibility.');const bytes=await readFile(f);const img=f.type==='image/png'?await pdf.embedPng(bytes):await pdf.embedJpg(bytes);const page=pdf.addPage([img.width,img.height]);page.drawImage(img,{x:0,y:0,width:img.width,height:img.height})}const bytes=await pdf.save();downloadBlob(new Blob([bytes],{type:'application/pdf'}),'images.pdf');setStatus('PDF created and downloaded.','success');return}
-if(id==='merge-pdf'){const fs=[...$('#files').files];if(fs.length<2)throw Error('Choose at least two PDF files.');const {PDFDocument}=PDFLib;const out=await PDFDocument.create();for(const f of fs){const doc=await PDFDocument.load(await readFile(f));const pages=await out.copyPages(doc,doc.getPageIndices());pages.forEach(p=>out.addPage(p))}const bytes=await out.save();downloadBlob(new Blob([bytes],{type:'application/pdf'}),'merged.pdf');setStatus('PDFs merged and downloaded.','success');return}
-if(id==='compress-pdf'){const f=$('#files').files[0];if(!f)throw Error('Choose a PDF first.');const pages=await renderPdfPages(f,1.25,Number($('#quality').value));const {PDFDocument}=PDFLib;const out=await PDFDocument.create();for(const p of pages){const bytes=await p.blob.arrayBuffer();const img=await out.embedJpg(bytes);const page=out.addPage([img.width,img.height]);page.drawImage(img,{x:0,y:0,width:img.width,height:img.height})}const bytes=await out.save();downloadBlob(new Blob([bytes],{type:'application/pdf'}),'compressed.pdf');setStatus(`Created image-based PDF with ${pages.length} pages. Original text/search links are not retained.`,'success');return}
-if(id==='pdf-jpg'){const f=$('#files').files[0];if(!f)throw Error('Choose a PDF first.');const pages=await renderPdfPages(f,Number($('#scale').value),.92);pages.forEach((p,i)=>downloadBlob(p.blob,`page-${i+1}.jpg`));setStatus(`${pages.length} JPG file(s) prepared. Your browser may ask to allow multiple downloads.`,'success');return}
-if(id==='split-pdf'){const f=$('#files').files[0];if(!f)throw Error('Choose a PDF first.');const {PDFDocument}=PDFLib;const src=await PDFDocument.load(await readFile(f));const total=src.getPageCount();const set=new Set();for(const part of $('#pages').value.split(',')){const m=part.trim().match(/^(\d+)(?:\s*-\s*(\d+))?$/);if(!m)throw Error('Enter pages like 1,3,5-7.');const a=Number(m[1]),b=Number(m[2]||m[1]);if(a<1||b<a||b>total)throw Error(`Page range must be between 1 and ${total}.`);for(let n=a;n<=b;n++)set.add(n-1)}if(!set.size)throw Error('Enter at least one page.');const out=await PDFDocument.create();const copied=await out.copyPages(src,[...set].sort((a,b)=>a-b));copied.forEach(p=>out.addPage(p));const bytes=await out.save();downloadBlob(new Blob([bytes],{type:'application/pdf'}),'split.pdf');setStatus(`Extracted ${set.size} page(s).`,'success');return}
-if(['image-compressor','image-resizer','jpg-png'].includes(id)){const f=$('#files').files[0];if(!f)throw Error('Choose an image first.');const {im,url}=await loadImage(f);let w=im.naturalWidth,h=im.naturalHeight;if(id==='image-resizer'){const iw=Number($('#width').value),ih=Number($('#height').value);if(!iw&&!ih)throw Error('Enter a width or height.');if($('#keep').checked){if(iw){w=iw;h=Math.max(1,Math.round(im.naturalHeight*iw/im.naturalWidth))}else{h=ih;w=Math.max(1,Math.round(im.naturalWidth*ih/im.naturalHeight))}}else{w=iw||w;h=ih||h}if(w>12000||h>12000)throw Error('Maximum dimension is 12000 pixels.')}const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');if($('#format')?.value==='image/jpeg'||id==='jpg-png') {ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h)}ctx.drawImage(im,0,0,w,h);URL.revokeObjectURL(url);const type=id==='jpg-png'?'image/png':$('#format').value;const blob=await canvasBlob(c,type,Number($('#quality')?.value||.8));const ext=type.split('/')[1].replace('jpeg','jpg');const name=(f.name.replace(/\.[^.]+$/,'')||'image')+'.'+ext;downloadBlob(blob,name);showResult(`<p>Original: ${im.naturalWidth} × ${im.naturalHeight}</p><p>Output: ${w} × ${h}</p><p>Original size: ${(f.size/1024).toFixed(1)} KB · Output size: ${(blob.size/1024).toFixed(1)} KB</p><img src="${URL.createObjectURL(blob)}" alt="Converted image preview">`);setStatus('Image processed and downloaded.','success');return}
-if(id==='qr'){const text=$('#qrtext').value.trim();if(!text)throw Error('Enter some text or a URL.');if(!window.QRCode)throw Error('QR library did not load. Check your internet connection.');const box=document.createElement('div');new QRCode(box,{text,width:Number($('#qrsize').value),height:Number($('#qrsize').value),correctLevel:QRCode.CorrectLevel.H});await new Promise(r=>setTimeout(r,150));const img=box.querySelector('img'),can=box.querySelector('canvas');let data;if(can)data=can.toDataURL('image/png');else if(img&&img.src.startsWith('data:'))data=img.src;else throw Error('QR image could not be created.');showResult(`<div style="text-align:center"><img style="width:${$('#qrsize').value}px;image-rendering:pixelated" src="${data}" alt="Generated QR code"><p><button class="btn small" id="downloadQr">Download PNG</button></p></div>`);$('#downloadQr').onclick=()=>{const a=document.createElement('a');a.href=data;a.download='qrcode.png';a.click()};setStatus('QR code generated.','success');return}
-if(id==='word-counter'){countText();return}
-if(id==='age'){const d=$('#dob').value,as=$('#asof').value;if(!d)throw Error('Choose your date of birth.');if(d>as)throw Error('Date of birth must be before the calculation date.');const b=new Date(d+'T12:00:00'),end=new Date(as+'T12:00:00');let y=end.getFullYear()-b.getFullYear(),m=end.getMonth()-b.getMonth(),days=end.getDate()-b.getDate();if(days<0){m--;days+=new Date(end.getFullYear(),end.getMonth(),0).getDate()}if(m<0){y--;m+=12}const next=new Date(end.getFullYear(),b.getMonth(),b.getDate());if(next<=end)next.setFullYear(next.getFullYear()+1);const until=Math.ceil((next-end)/86400000);showResult(`<span class="muted">Your age is</span><h2>${y} years, ${m} months, ${days} days</h2><p>Next birthday in approximately ${until} day(s).</p>`);setStatus('Age calculated.','success');return}
-if(id==='percentage'){const a=Number($('#numA').value),b=Number($('#numB').value),type=$('#ptype').value;if($('#numA').value===''||$('#numB').value==='')throw Error('Enter both numbers.');let ans,label;if(type==='of'){ans=a/100*b;label=`${a}% of ${b} = ${ans}`}else if(type==='is'){if(b===0)throw Error('The second number cannot be zero.');ans=a/b*100;label=`${a} is ${ans.toFixed(4).replace(/\.?0+$/,'')}% of ${b}`}else{if(a===0)throw Error('Starting value cannot be zero.');ans=(b-a)/Math.abs(a)*100;label=`Change from ${a} to ${b} = ${ans.toFixed(2)}%`}showResult(`<span class="muted">Result</span><h2>${esc(label)}</h2>`);setStatus('Calculation complete.','success');return}
-if(id==='json'){jsonAction(false);return}
-if(id==='password'){const n=Number($('#length').value);if(!Number.isInteger(n)||n<8||n>128)throw Error('Choose a length between 8 and 128.');let pool='';if($('#upper').checked)pool+='ABCDEFGHIJKLMNOPQRSTUVWXYZ';if($('#lower').checked)pool+='abcdefghijklmnopqrstuvwxyz';if($('#nums').checked)pool+='0123456789';if($('#symbols').checked)pool+='!@#$%^&*()-_=+[]{}:,.?';if(!pool)throw Error('Select at least one character set.');const arr=new Uint32Array(n);crypto.getRandomValues(arr);let pass=Array.from(arr,x=>pool[x%pool.length]).join('');showResult(`<div class="field"><label>Generated password</label><input id="passout" value="${esc(pass)}" readonly></div><button class="btn small" id="copyPass">Copy password</button><button class="btn small" id="againPass">Generate another</button>`);$('#copyPass').onclick=()=>navigator.clipboard.writeText(pass).then(()=>setStatus('Copied to clipboard.','success')).catch(()=>{ $('#passout').select();setStatus('Select and copy the password manually.')});$('#againPass').onclick=()=>executeTool('password').catch(e=>setStatus(e.message,'error'));setStatus('Generated locally in your browser.','success');return}
-if(id==='youtube'){const raw=$('#video').value.trim();const m=raw.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/))([A-Za-z0-9_-]{11})/);const video=m?m[1]:(/^[A-Za-z0-9_-]{11}$/.test(raw)?raw:null);if(!video)throw Error('Enter a valid YouTube URL or 11-character video ID.');const sizes=[['Max resolution','maxresdefault.jpg'],['High quality','hqdefault.jpg'],['Medium quality','mqdefault.jpg'],['Standard','sddefault.jpg']];showResult(`<p class="muted">Video ID: ${esc(video)}. If a size is unavailable, YouTube may show a fallback thumbnail.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">${sizes.map(([label,file])=>`<div><b>${label}</b><img style="display:block;width:100%;margin-top:8px" src="https://img.youtube.com/vi/${video}/${file}" alt="${label} thumbnail" loading="lazy" onerror="this.style.opacity='.35'"><p><a href="https://img.youtube.com/vi/${video}/${file}" target="_blank" rel="noopener">Open image ↗</a></p></div>`).join('')}</div>`);setStatus('Thumbnail previews loaded when available.','success');return}
-}
-renderTools();
-</script>
-</body>
-</html>
+case'percentage':return '<div class="field"><label>Calculation type</label><select id="ptype"><option value="of">What is X% of Y?</option><option value="is">X is what % of Y?</option><option value="chang
