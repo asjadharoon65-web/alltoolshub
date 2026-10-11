@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Free online PDF, image, calculator, text and developer tools. Fast, simple and privacy-friendly.">
+  <title>AllToolsHub — Free Online Tools</title>
+  <style>
+:root{--bg:#0b1120;--panel:#111a2d;--panel2:#162238;--line:#28354c;--text:#eef4ff;--muted:#9aa9c1;--accent:#7c9cff;--accent2:#62e6c2;--danger:#ff7d91;--shadow:0 18px 50px #0003}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 450px at 80% -5%,#263b70 0%,transparent 60%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}
+header{border-bottom:1px solid #ffffff12;background:#0b1120cc;backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px;font-size:20px}.logo{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#9d7cff);color:white;font-weight:900;box-shadow:0 8px 25px #7c9cff40}.brand span:last-child{color:var(--accent)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:14px}.navlinks a:hover{color:white}.menu{display:none}
+.hero{padding:76px 0 48px;text-align:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #7c9cff55;border-radius:999px;padding:7px 12px;color:#b9c9ff;background:#7c9cff12;font-size:12px;font-weight:700;letter-spacing:.5px}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 10px var(--accent2)}
+h1{font-size:clamp(36px,6vw,66px);line-height:1.04;letter-spacing:-2.8px;margin:22px auto 18px;max-width:850px}h1 .gradient{background:linear-gradient(90deg,#a7bbff,#8cebd9);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:640px;margin:0 auto;color:var(--muted);font-size:17px}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:27px;flex-wrap:wrap}
+.btn{border:1px solid var(--line);border-radius:12px;padding:11px 17px;color:var(--text);background:var(--panel2);font-weight:700;transition:.2s}.btn:hover{transform:translateY(-1px);border-color:#7188bb}.btn.primary{background:linear-gradient(135deg,#7c9cff,#8c83ff);border:0;color:#081123}.btn.small{padding:8px 12px;font-size:13px}.trust{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:25px;color:#b7c5d9;font-size:12px}.trust span{display:flex;align-items:center;gap:7px}.trust b{color:var(--accent2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:10px auto 52px;max-width:800px}.stat{padding:18px;border:1px solid var(--line);border-radius:16px;background:#ffffff05}.stat strong{display:block;font-size:23px}.stat span{color:var(--muted);font-size:12px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}.section-head h2{margin:0;font-size:27px;letter-spacing:-.7px}.section-head p{margin:5px 0 0;color:var(--muted)}.searchbox{position:relative;width:min(340px,100%)}.searchbox input{width:100%;border:1px solid var(--line);border-radius:13px;padding:13px 15px 13px 42px;background:#111a2d;color:var(--text);outline:none}.searchbox input:focus{border-color:var(--accent)}.searchbox span{position:absolute;left:14px;top:10px;color:var(--muted);font-size:18px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 24px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:8px 13px;font-size:13px}.filter.active,.filter:hover{background:#7c9cff20;color:#dbe4ff;border-color:#7c9cff88}
+.tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.tool-card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#151f33,#101827);padding:20px;min-height:170px;display:flex;flex-direction:column;transition:.22s;cursor:pointer;text-align:left;color:inherit}.tool-card:hover{transform:translateY(-4px);border-color:#637db5;box-shadow:var(--shadow)}.tool-icon{height:43px;width:43px;border-radius:13px;display:grid;place-items:center;background:#7c9cff18;color:#b6c8ff;font-size:21px;margin-bottom:15px}.tool-card h3{margin:0 0 6px;font-size:16px}.tool-card p{margin:0;color:var(--muted);font-size:13px}.tool-meta{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center;color:#90a6d8;font-size:12px}.arrow{font-size:18px}
+.privacy{margin:54px 0;border:1px solid #2e625d;background:linear-gradient(100deg,#16363370,#111a2d);border-radius:20px;padding:25px;display:flex;gap:18px;align-items:center}.privacy-icon{font-size:27px}.privacy h3{margin:0 0 4px}.privacy p{margin:0;color:var(--muted);font-size:14px}
+footer{border-top:1px solid #ffffff12;padding:28px 0 38px;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.modal-backdrop{position:fixed;inset:0;background:#030711c9;backdrop-filter:blur(8px);z-index:30;display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.show{display:flex}.modal{width:min(720px,100%);max-height:min(88vh,900px);overflow:auto;background:#111a2d;border:1px solid #33435f;border-radius:22px;box-shadow:0 30px 90px #0008}.modal-head{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#111a2d;z-index:2}.modal-head h2{margin:0;font-size:21px}.close{width:35px;height:35px;border-radius:10px;border:1px solid var(--line);background:transparent;color:white;font-size:22px}.modal-body{padding:22px}.tool-description{color:var(--muted);margin:0 0 20px}.field{margin:14px 0}.field label{display:block;margin-bottom:7px;color:#c9d5e8;font-size:13px;font-weight:700}.field input:not([type=file]):not([type=checkbox]),.field textarea,.field select{width:100%;background:#0b1220;color:var(--text);border:1px solid #33435c;border-radius:11px;padding:12px;outline:none}.field textarea{min-height:130px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent)}input[type=file]{width:100%;padding:15px;border:1px dashed #526583;background:#0b1220;border-radius:12px;color:var(--muted)}.row-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tool-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.status{margin-top:15px;border-radius:10px;padding:11px 13px;background:#0b1220;color:#b8c8df;font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}.status.error{color:#ffb4bf;border:1px solid #733847}.status.success{color:#a6f4d8;border:1px solid #285e50}.output{margin-top:16px;padding:15px;border:1px solid var(--line);border-radius:12px;background:#0b1220;overflow:auto}.output img{max-width:100%;height:auto;border-radius:8px}.muted{color:var(--muted);font-size:13px}.hidden{display:none!important}.checkrow{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px;margin-top:10px}.output a{color:#aebfff;text-decoration:underline}.pill{display:inline-block;padding:4px 8px;background:#7c9cff20;color:#b9caff;border-radius:8px;font-size:11px}
+@media(max-width:850px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navlinks{gap:13px}.hero{padding-top:55px}}
+@media(max-width:560px){.wrap{width:min(100% - 24px,1180px)}.nav{height:64px}.navlinks{display:none}.menu{display:block}.hero{padding:48px 0 32px}h1{letter-spacing:-1.5px}.stats{gap:8px;margin-bottom:38px}.stat{padding:13px 8px}.stat strong{font-size:19px}.stat span{font-size:10px}.section-head{align-items:stretch;flex-direction:column}.tool-grid{grid-template-columns:1fr}.tool-card{min-height:145px}.privacy{align-items:flex-start;padding:18px}.row-fields{grid-template-columns:1fr}.modal-body{padding:16px}.modal-head{padding:16px}.trust{gap:12px}}
+.tool-mode main,.tool-mode footer{display:none}.tool-mode .modal-backdrop{padding:12px}.tool-mode .modal{width:min(820px,100%);max-height:calc(100vh - 24px)}.tool-mode .modal-body{padding:clamp(16px,3vw,28px)}
+</style>
+ </head>
+ <body>
+  <header>
+   <div class="wrap nav">
+    <a class="brand" href="#"><span class="logo">A</span><span>AllTools<span>Hub</span></span></a>
+    <nav class="navlinks">
+     <a href="#tools">All tools</a><a href="#privacy">Privacy</a><a href="#about">About</a>
+    </nav>
+    <a class="btn small menu" href="#tools">Explore tools ↓</a>
+   </div>
+  </header>
+  <main>
+   <section class="hero wrap">
+    <div class="eyebrow">
+     <span class="dot"></span> FREE TOOLS · NO SIGN-UP
+    </div>
+    <h1>Everyday tasks, <span class="gradient">made effortless.</span></h1>
+    <p>Handy PDF, image, text and developer tools in one simple place. No account needed, and many tasks run right in your browser.</p>
+    <div class="hero-actions">
+     <a class="btn primary" href="#tools">Explore all tools <span>↗</span></a>
+     <button class="btn" id="randomTool">✨ Surprise me</button>
+    </div>
+    <div class="trust">
+     <span><b>✓</b> Free to use</span><span><b>✓</b> No sign-up</span><span><b>✓</b> Browser-based tools</span>
+    </div>
+   </section>
+   <section class="wrap stats">
+    <div class="stat">
+     <strong>15</strong><span>Useful tools</span>
+    </div>
+    <div class="stat">
+     <strong>0</strong><span>Accounts required</span>
+    </div>
+    <div class="stat">
+     <strong>100%</strong><span>Simple to use</span>
+    </div>
+   </section>
+   <section class="wrap" id="tools">
+    <div class="section-head">
+     <div>
+      <h2>Find your tool</h2>
+      <p>Choose a tool and get it done in seconds.</p>
+     </div>
+     <div class="searchbox">
+      <span>⌕</span><input id="search" type="search" placeholder="Search tools..." aria-label="Search tools">
+     </div>
+    </div>
+    <div class="filters" id="filters"></div>
+    <div class="tool-grid" id="toolGrid"></div>
+    <p id="empty" class="muted hidden">No tools found. Try another search.</p>
+   </section>
+   <section class="wrap privacy" id="privacy">
+    <div class="privacy-icon">🛡️</div>
+    <div>
+     <h3>Your files stay yours</h3>
+     <p>File tools are designed to process content locally in your browser when possible. Avoid uploading sensitive files to any website unless you trust how it handles them. External libraries load from public CDNs.</p>
+    </div>
+   </section>
+  </main>
+  <footer id="about">
+   <div class="wrap foot">
+    <div>
+     <b style="color:#eef4ff">AllToolsHub</b> · Useful tools, less hassle.
+    </div>
+    <div>
+     Free to use · Built for the web · © <span id="year"></span> AllToolsHub
+    </div>
+   </div>
+  </footer>
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+   <div class="modal">
+    <div class="modal-head">
+     <h2 id="modalTitle">Tool</h2>
+     <button class="close" id="closeModal" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+   </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script>
+const tools=[
+{id:'jpg-pdf',name:'JPG to PDF',cat:'PDF Tools',icon:'▧',desc:'Turn images into a neat PDF document.',tag:'PDF',action:'jpg-pdf'},
+{id:'merge-pdf',name:'Merge PDF',cat:'PDF Tools',icon:'▤',desc:'Combine multiple PDF files into one.',tag:'PDF',action:'merge-pdf'},
+{id:'compress-pdf',name:'Compress PDF',cat:'PDF Tools',icon:'⇣',desc:'Reduce PDF size by converting pages to images.',tag:'PDF',action:'compress-pdf'},
+{id:'pdf-jpg',name:'PDF to JPG',cat:'PDF Tools',icon:'▧',desc:'Export PDF pages as downloadable JPG images.',tag:'PDF',action:'pdf-jpg'},
+{id:'split-pdf',name:'Split PDF',cat:'PDF Tools',icon:'✂',desc:'Save selected pages into a separate PDF.',tag:'PDF',action:'split-pdf'},
+{id:'image-compressor',name:'Image Compressor',cat:'Image Tools',icon:'◈',desc:'Make JPG, PNG or WebP images smaller.',tag:'Image',action:'image-compressor'},
+{id:'image-resizer',name:'Image Resizer',cat:'Image Tools',icon:'⤢',desc:'Resize an image to custom dimensions.',tag:'Image',action:'image-resizer'},
+{id:'jpg-png',name:'JPG to PNG',cat:'Image Tools',icon:'▣',desc:'Convert a JPG image to PNG format.',tag:'Image',action:'jpg-png'},
+{id:'qr',name:'QR Code Generator',cat:'Generators',icon:'▦',desc:'Create a QR code for text or a website link.',tag:'Generate',action:'qr'},
+{id:'word-counter',name:'Word Counter',cat:'Text Tools',icon:'¶',desc:'Count words, characters, sentences and lines.',tag:'Text',action:'word-counter'},
+{id:'age',name:'Age Calculator',cat:'Calculators',icon:'◷',desc:'Calculate your age from a date of birth.',tag:'Calculate',action:'age'},
+{id:'percentage',name:'Percentage Calculator',cat:'Calculators',icon:'%',desc:'Find percentages and percentage changes.',tag:'Calculate',action:'percentage'},
+{id:'json',name:'JSON Formatter',cat:'Developer Tools',icon:'{ }',desc:'Format, validate and minify JSON data.',tag:'Developer',action:'json'},
+{id:'password',name:'Password Generator',cat:'Generators',icon:'⚿',desc:'Generate a random password in your browser.',tag:'Generate',action:'password'},
+{id:'youtube',name:'YouTube Thumbnail Previewer',cat:'Media Tools',icon:'▶',desc:'Preview available thumbnail sizes from a video ID or URL.',tag:'Media',action:'youtube'}
+];
+const cats=['All tools','PDF Tools','Image Tools','Calculators','Text Tools','Generators','Developer Tools','Media Tools'];
+let activeCat='All tools';
+const $=s=>document.querySelector(s);
+function renderTools(){const q=$('#search').value.trim().toLowerCase();const filtered=tools.filter(t=>(activeCat==='All tools'||t.cat===activeCat)&&(`${t.name} ${t.desc} ${t.cat}`).toLowerCase().includes(q));$('#toolGrid').innerHTML=filtered.map(t=>`<button class="tool-card" data-tool="${t.id}"><div class="tool-icon">${t.icon}</div><h3>${t.name}</h3><p>${t.desc}</p><div class="tool-meta"><span>${t.tag} tool</span><span class="arrow">↗</span></div></button>`).join('');$('#empty').classList.toggle('hidden',filtered.length>0);document.querySelectorAll('[data-tool]').forEach(b=>b.addEventListener('click',()=>{window.location.href='tool.html?id='+encodeURIComponent(b.dataset.tool)}));}
+$('#filters').innerHTML=cats.map(c=>`<button class="filter ${c===activeCat?'active':''}" data-cat="${c}">${c}</button>`).join('');
+document.querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{activeCat=b.dataset.cat;document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('active',x.dataset.cat===activeCat));renderTools()}));
+$('#search').addEventListener('input',renderTools);$('#year').textContent=new Date().getFullYear();
+$('#randomTool').addEventListener('click',()=>{window.location.href='tool.html?id='+encodeURIComponent(tools[Math.floor(Math.random()*tools.length)].id)});
+$('#closeModal').onclick=closeModal;$('#modalBackdrop').addEventListener('click',e=>{if(e.target===$('#modalBackdrop'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function closeModal(){$('#modalBackdrop').classList.remove('show')}
+function openTool(id){const t=tools.find(x=>x.id===id);if(!t)return;$('#modalTitle').textContent=t.name;$('#modalBody').innerHTML=`<p class="tool-description">${t.desc}</p>${toolMarkup(id)}<div id="status" class="status" aria-live="polite">Ready when you are.</div><div id="result" class="output hidden"></div>`;$('#modalBackdrop').classList.add('show');wireTool(id)}
+function toolMarkup(id){
+const file=(multiple=false,accept='*/*',label='Choose file')=>`<div class="field"><label>${label}</label><input id="files" type="file" ${multiple?'multiple':''} accept="${accept}"></div>`;
+switch(id){
+case'jpg-pdf':return file(true,'image/jpeg,image/png,image/webp','Choose images (you can select multiple)')+'<p class="muted">Images are placed one per PDF page. PNG and JPEG are supported best.</p><button class="btn primary" id="run">Create PDF</button>';
+case'merge-pdf':return file(true,'application/pdf','Choose two or more PDF files')+'<button class="btn primary" id="run">Merge PDFs</button>';
+case'compress-pdf':return file(false,'application/pdf','Choose a PDF')+'<div class="field"><label>Image quality <span class="muted">(lower = smaller file)</span></label><input id="quality" type="range" min=".35" max=".85" step=".05" value=".65"></div><button class="btn primary" id="run">Compress PDF</button><p class="muted">This rasterizes pages, so searchable text and links will not be preserved.</p>';
+case'pdf-jpg':return file(false,'application/pdf','Choose a PDF')+'<div class="field"><label>Scale</label><select id="scale"><option value="1">Standard</option><option value="1.5" selected>High quality</option><option value="2">Very high quality</option></select></div><button class="btn primary" id="run">Convert pages</button>';
+case'split-pdf':return file(false,'application/pdf','Choose a PDF')+'<div class="field"><label>Pages to extract</label><input id="pages" placeholder="e.g. 1,3,5-7" value="1"></div><p class="muted">Page numbers start at 1. Use commas and ranges.</p><button class="btn primary" id="run">Split PDF</button>';
+case'image-compressor':return file(false,'image/*','Choose an image')+'<div class="row-fields"><div class="field"><label>Output format</label><select id="format"><option value="image/jpeg">JPG</option><option value="image/webp">WebP</option><option value="image/png">PNG (usually larger)</option></select></div><div class="field"><label>Quality (JPG/WebP)</label><input id="quality" type="range" min=".2" max="1" step=".05" value=".75"></div></div><button class="btn primary" id="run">Compress image</button>';
+case'image-resizer':return file(false,'image/*','Choose an image')+'<div class="row-fields"><div class="field"><label>Width (px)</label><input id="width" type="number" min="1" max="12000" placeholder="e.g. 1200"></div><div class="field"><label>Height (px)</label><input id="height" type="number" min="1" max="12000" placeholder="e.g. 800"></div></div><label class="checkrow"><input id="keep" type="checkbox" checked> Keep aspect ratio (uses width if entered)</label><div class="field"><label>Output format</label><select id="format"><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/webp">WebP</option></select></div><button class="btn primary" id="run">Resize image</button>';
+case'jpg-png':return file(false,'image/jpeg,image/jpg,image/webp,image/png','Choose an image')+'<button class="btn primary" id="run">Convert to PNG</button>';
+case'qr':return '<div class="field"><label>Text or URL</label><input id="qrtext" placeholder="https://example.com" value="https://example.com"></div><div class="field"><label>Size</label><select id="qrsize"><option>128</option><option selected>200</option><option>300</option><option>400</option></select></div><button class="btn primary" id="run">Generate QR code</button>';
+case'word-counter':return '<div class="field"><label>Your text</label><textarea id="text" placeholder="Paste or type your text here..."></textarea></div><div class="tool-actions"><button class="btn primary" id="run">Count text</button><button class="btn" id="clear">Clear</button></div>';
+case'age':return '<div class="field"><label>Date of birth</label><input id="dob" type="date" max="'+new Date().toISOString().slice(0,10)+'"></div><div class="field"><label>Calculate age on (optional)</label><input id="asof" type="date" value="'+new
